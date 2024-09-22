@@ -1,0 +1,62 @@
+{
+  "name": "web_pen_sdk",
+  "version": "0.7.8",
+  "description": "Neosmartpen typescript library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "Test"
+  ],
+  "scripts": {
+    "start": "node examples/server.js",
+    "build:webpack": "rm -rf dist && webpack",
+    "build": "rm -rf dist && tsc && npm run convertNPROJ && cp -r ./src/API/nproj ./dist/API/nproj",
+    "test": "jest",
+    "clean": "rm -rf dist & rm -rf node_modules & rm package-lock.json & rm yarn.lock",
+    "prepare": "yarn build",
+    "deploy": "yarn publish",
+    "convertNPROJ": "node ./src/Util/converterNPROJ.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoSmartpen/WEB-SDK2.0.git"
+  },
+  "keywords": [],
+  "author": "Wonho Seo <swh1182@neolab.net>",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/NeoSmartpen/WEB-SDK2.0/issues",
+    "email": "swh1182@neolab.net"
+  },
+  "homepage": "https://github.com/NeoSmartpen/WEB-SDK2.0#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "@types/jest": "^26.0.23",
+    "@types/jquery": "^3.5.14",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "jest": "^27.0.4",
+    "webpack": "^5.24.4",
+    "xml2js": "^0.4.23"
+  },
+  "dependencies": {
+    "@types/web-bluetooth": "0.0.14",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "jquery": "^3.6.0",
+    "jszip": "^3.10.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "typescript": "^4.2.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
+}
