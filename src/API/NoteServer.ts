@@ -27,10 +27,10 @@ const setNprojInPuiController = async (url: string | null, pageInfo: PageInfo): 
     const jszip = new JSZip();
     const zip = await jszip.loadAsync(zipBlob);
 
-    console.log("@zip1", zip);
+
    // const zipFile = zip.file(`${pageInfo.section}_${pageInfo.owner}_${pageInfo.book}.nproj`);
     const zipFile = zip.file(`${pageInfo.section}_${pageInfo.owner}_${pageInfo.book}/${pageInfo.section}_${pageInfo.owner}_${pageInfo.book}.nproj`);
-    console.log("@nprojFile1", zipFile);
+
 
     if (zipFile) {
       const nprojData = await zipFile.async("text");
