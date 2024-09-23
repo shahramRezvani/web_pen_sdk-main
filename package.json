@@ -23,16 +23,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeoSmartpen/WEB-SDK2.0.git"
+    "url": "git+https://sh_rezvani/web_pen_sdk.git"
   },
   "keywords": [],
   "author": "Wonho Seo <swh1182@neolab.net>",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/NeoSmartpen/WEB-SDK2.0/issues",
+    "url": "https://sh_rezvani/web_pen_sdk/issues",
     "email": "swh1182@neolab.net"
   },
-  "homepage": "https://github.com/NeoSmartpen/WEB-SDK2.0#readme",
+  "homepage": "https://sh_rezvani/web_pen_sdk#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
